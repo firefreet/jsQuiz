@@ -19,7 +19,9 @@ if (localStorage.getItem("savedScores") === null) {
     var savedScores = JSON.parse(localStorage.getItem("savedScores"))
 }
 
-
+// sounds from zapsplat.com
+var fail = new Audio("shortCrash.m4a")
+var succeed = new Audio("shortBell.m4a")
 
 stEndEl.on("click",startQuiz);
 cardEl.on("click",".tempBtn",answerQuestion);
@@ -77,17 +79,18 @@ function displayQ () {
 }
 
 function saveScore() {
-    if ($(".initBox").val() === "") {
-        alert ("Please enter initials")
-    }
-    else if (!$("#saveBtn").hasClass("disabled")) {
-        $("#saveBtn").addClass("disabled")
-        var score = [ $(".initBox").val(), seconds ]
-        savedScores.push(score)
-        localStorage.setItem("savedScores",JSON.stringify(savedScores))
-        $(".initBox").attr("readonly","true")
-        alert("Score saved")
-    }
+    if (event.key === "Enter" || event.type === "click")
+        if ($(".initBox").val() === "") {
+            alert ("Please enter initials")
+        }
+        else if (!$("#saveBtn").hasClass("disabled")) {
+            $("#saveBtn").addClass("disabled")
+            var score = [ $(".initBox").val(), seconds ]
+            savedScores.push(score)
+            localStorage.setItem("savedScores",JSON.stringify(savedScores))
+            $(".initBox").attr("readonly","true")
+            alert("Score saved")
+        }
 }
 
 function wrapUp() {
@@ -114,6 +117,7 @@ function wrapUp() {
     replayBtn.addClass(tempBtnClasses)
     respEl.append(replayBtn)
     $("#saveBtn").on("click",saveScore);
+    $(".initBox").on("keyup",saveScore);
     $("#replayBtn").on("click",startQuiz);
 }
 
@@ -132,9 +136,11 @@ function answerQuestion() {
         // creat appropriate response
         if (choice === answ) {
         resp = "Correct!  "
+        succeed.play()
         }
         else {
             resp = "Incorrect...  "
+            fail.play();
             seconds = Math.max(seconds - 10,0);
             if (seconds === 0) {
                 gameActive = false;

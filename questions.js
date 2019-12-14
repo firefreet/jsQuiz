@@ -8,7 +8,7 @@ var qs = [
     {
         question: "2.  How long did Brendan Eich take to write the JavaScript programming language?",
         choices: ["a) 10 days","b) 2 weeks","c) 2 months","d) 10 months",],
-        answer: "a) 10 Days"
+        answer: "a) 10 days"
     },
     {   
         question: "3.  JavaScript wasn’t always called that. What other name has it been released under?",
