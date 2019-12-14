@@ -17,7 +17,7 @@ var scList = $("#scoreList")
 
 $.each(savedScores,function(i,val){
     var addScore = $("<li>");
-    addScore.addClass("list-group-item px-0");
+    addScore.addClass("list-group-item px-4");
     var usr = $("<span class=\"float-left\">");
     usr.text("User: " + val[0].toUpperCase());
     var scrEl = $("<span class=\"float-right\">");

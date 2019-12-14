@@ -99,7 +99,7 @@ function wrapUp() {
     // display input box for initials
     respEl.text("Add your initials to save score:")
     var initBox = $("<input>");
-    initBox.addClass("form-control w-25 mx-auto initBox text-center")
+    initBox.addClass("form-control w-50 mx-auto initBox text-center")
     initBox.attr("type","text")
     initBox.attr("maxlength","3")
     respEl.append(initBox)
