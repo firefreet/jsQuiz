@@ -123,7 +123,7 @@ function wrapUp() {
 }
 
 function answerQuestion() {
-    if (answClickable) {
+    if (answClickable && gameActive) {
         // stop buttons from doing anything until next Q
         answClickable = false
         // stop timer from decrementing until next Q
