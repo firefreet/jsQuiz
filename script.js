@@ -44,7 +44,7 @@ function startQuiz () {
         if (!pauseSeconds) {
             seconds--
         }
-        if (seconds === 0 || qNum === totalQs) {
+        if (seconds <= 0 || qNum === totalQs) {
             gameActive = false
             wrapUp()
             respDiv.show()
@@ -167,6 +167,7 @@ function answerQuestion() {
         else {
             setTimeout(() => {
                 wrapUp()
+                qNum++
             }, 1000);
         }
     }
