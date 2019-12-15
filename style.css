@@ -1,0 +1,13 @@
+/* images from https://www.toptal.com/designers/subtlepatterns */
+
+.card {
+    background-image: url("blue-snow.png");
+}
+.nav {
+    font-size: x-large;
+    color: lightblue;
+}
+
+body {
+    background-image: url("dark-grey-terrazzo.png");
+}

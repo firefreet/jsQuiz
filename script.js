@@ -85,6 +85,7 @@ function saveScore() {
         }
         else if (!$("#saveBtn").hasClass("disabled")) {
             $("#saveBtn").addClass("disabled")
+            $("#saveBtn").text("Saved")
             var score = [ $(".initBox").val(), seconds ]
             savedScores.push(score)
             localStorage.setItem("savedScores",JSON.stringify(savedScores))
