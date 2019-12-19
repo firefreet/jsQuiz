@@ -13,7 +13,7 @@ var seconds = 0;
 var answClickable = true;
 var gameActive = true;
 var pauseSeconds = false;
-var tempBtnClasses = "btn btn-primary m-2 tempBtn";
+var tempBtnClasses = "btn btn-primary m-2 tempBtn btn-sm";
 if (localStorage.getItem("savedScores") === null) {
     var savedScores = []
 } else {
@@ -82,10 +82,13 @@ function displayQ () {
     contEl.html(qs[qNum].question)
     // loop to display all choices
     $.each(qs[qNum].choices,function(i,val){
-        var newBtn = $("<button>")
-        newBtn.text(val)
-        newBtn.addClass(tempBtnClasses)
-        respDiv.before(newBtn)
+        var newRow = $("<row>");
+        var newBtn = $("<button>");
+        newRow.addClass("d-block")
+        newBtn.text(val);
+        newBtn.addClass(tempBtnClasses);
+        newRow.append(newBtn)
+        respDiv.before(newRow);
     })
 }
 

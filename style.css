@@ -16,3 +16,9 @@ body {
     background-color: #fff;
     color:  #007bff;
 }
+
+@media screen and (max-width: 374px) {
+    .nav {
+        font-size: large;
+    }
+}

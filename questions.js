@@ -70,7 +70,7 @@ var questions2 = [
         answer: "d) 1"
     },
     {
-        question: "What will the following display? <div class=\"text-left\"><br>var length = 10\;<br>function fn() {<br>&emsp;console.log(this.length)\;<br>\}<br><br>var obj = \{<br>&emsp;length: 5\,<br>&emsp;method: function(fn) \{<br>&emsp;&emsp;arguments[0]()\;<br>\&emsp;}<br>}\;<br><br>obj.method(fn, 1)\;</div>",
+        question: "What will the following display? <small><div class=\"text-left\"><br>var length = 10\;<br>function fn() {<br>&emsp;console.log(this.length)\;<br>\}<br><br>var obj = \{<br>&emsp;length: 5\,<br>&emsp;method: function(fn) \{<br>&emsp;&emsp;arguments[0]()\;<br>\&emsp;}<br>}\;<br><br>obj.method(fn, 1)\;</div><small>",
         choices: ["a) 10","b) 5","c) 2","d) 0"],
         answer: "c) 2"
     },
