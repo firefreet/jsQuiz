@@ -147,11 +147,11 @@ function answerQuestion() {
         answ = qs[qNum].answer
         // creat appropriate response
         if (choice === answ) {
-        resp = "Correct!  "
+        resp = "Correct!<br>"
         succeed.play()
         }
         else {
-            resp = "Incorrect...  "
+            resp = "Incorrect...  (10 sec penalty!)<br>"
             fail.play();
             seconds = Math.max(seconds - 10,0);
             if (seconds === 0) {
