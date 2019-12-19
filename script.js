@@ -1,12 +1,13 @@
 var headEl = $("#sectionHeader")
 var contEl = $("#sectionContent")
 var respEl = $("#response")
-var stEndEl = $("#startEndBtn")
+var stEndEl = $(".startEndBtn")
 var cardEl = $(".card-body")
 var respDiv = $("#respDiv")
 var timeSpn = $("#timeSpan")
 var intervalID = 0;
 var qNum = 0;
+var qs = []
 var totalQs = qs.length;
 var seconds = 0;
 var answClickable = true;
@@ -29,6 +30,16 @@ cardEl.on("click",".tempBtn",answerQuestion);
 respDiv.hide()
 
 function startQuiz () {
+
+    switch ($(this).data("quiznum")) {
+        case 1:
+        qs = questions1;
+        break;
+        case 2:
+        qs = questions2;
+        break;
+    }
+    totalQs = qs.length;
     pauseSeconds = false;
     gameActive = true;
     answClickable = true;
@@ -68,7 +79,7 @@ function displayQ () {
     // display question
     respDiv.hide()
     clearButtons()
-    contEl.text(qs[qNum].question)
+    contEl.html(qs[qNum].question)
     // loop to display all choices
     $.each(qs[qNum].choices,function(i,val){
         var newBtn = $("<button>")
@@ -152,7 +163,7 @@ function answerQuestion() {
         respDiv.show()
         // if qs and seconds remain...
         if (qNum < totalQs-1 && gameActive) {
-            // wait 1 seconds to allow player to see answer
+            // wait 2 seconds to allow player to see answer
             setTimeout(() => {
                 // increment to next question
                 qNum++
@@ -161,14 +172,14 @@ function answerQuestion() {
                 displayQ()
                 // restart seconds countdown
                 pauseSeconds = false;            
-            }, 1000);
+            }, 2000);
         }
         // if no Qs remain, or time has run out
         else {
             setTimeout(() => {
                 wrapUp()
                 qNum++
-            }, 1000);
+            }, 2000);
         }
     }
 
