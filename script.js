@@ -46,7 +46,6 @@ function startQuiz () {
     seconds = totalQs * 15;
     qNum = 0;
     // display Question in HR
-    headEl.text("Question: ")
     // hide startEndBtn
     stEndEl.hide()
     // start timer interval for displaying seconds
@@ -79,6 +78,7 @@ function displayQ () {
     // display question
     respDiv.hide()
     clearButtons()
+    headEl.text("Question: " + (qNum+1))
     contEl.html(qs[qNum].question)
     // loop to display all choices
     $.each(qs[qNum].choices,function(i,val){
