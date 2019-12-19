@@ -114,7 +114,7 @@ function wrapUp() {
     // display input box for initials
     respEl.text("Add your initials to save score:")
     var initBox = $("<input>");
-    initBox.addClass("form-control w-50 mx-auto initBox text-center")
+    initBox.addClass("form-control w-50 mx-auto initBox text-center tempBtn")
     initBox.attr("type","text")
     initBox.attr("maxlength","3")
     respEl.append(initBox)
@@ -130,7 +130,16 @@ function wrapUp() {
     respEl.append(replayBtn)
     $("#saveBtn").on("click",saveScore);
     $(".initBox").on("keyup",saveScore);
-    $("#replayBtn").on("click",startQuiz);
+    $("#replayBtn").on("click",resetPage);
+}
+
+function resetPage() {
+    clearButtons();
+    respDiv.hide();
+    stEndEl.show();
+    headEl.text("JavaScript Quiz");
+    contEl.html("Would you like to take a Quiz? <br><small>(Q set 1 from <a href=\"https://jaxenter.com/know-your-javascript-trivia-134924.html\">jaxenter.com</a>)</small>");
+
 }
 
 function answerQuestion() {
@@ -151,7 +160,7 @@ function answerQuestion() {
         succeed.play()
         }
         else {
-            resp = "Incorrect...  (10 sec penalty!)<br>"
+            resp = "Incorrect...  (10 second penalty!)<br>"
             fail.play();
             seconds = Math.max(seconds - 10,0);
             if (seconds === 0) {
