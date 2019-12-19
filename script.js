@@ -144,23 +144,24 @@ function resetPage() {
 
 function answerQuestion() {
     if (answClickable && gameActive) {
+        $(this).addClass("btn-outline-primary").removeClass("btn-primary");
         // stop buttons from doing anything until next Q
         answClickable = false
         // stop timer from decrementing until next Q
         pauseSeconds = true;
-        event.stopPropagation
-        var resp = ""
+        event.stopPropagation;
+        var resp = "";
         // get user's answer as text
-        choice = event.target.textContent
+        choice = event.target.textContent;
         // validate user's answer against correct answer
-        answ = qs[qNum].answer
+        answ = qs[qNum].answer;
         // creat appropriate response
         if (choice === answ) {
-        resp = "Correct!<br>"
-        succeed.play()
+        resp = "Correct!<br>";
+        succeed.play();
         }
         else {
-            resp = "Incorrect...  (10 second penalty!)<br>"
+            resp = "Incorrect...  (10 second penalty!)<br>";
             fail.play();
             seconds = Math.max(seconds - 10,0);
             if (seconds === 0) {
@@ -168,8 +169,8 @@ function answerQuestion() {
             }
         }
         // display response
-        respEl.html(resp + "The answer is: <br>" + answ)
-        respDiv.show()
+        respEl.html(resp + "The answer is: <br>" + answ);
+        respDiv.show();
         // if qs and seconds remain...
         if (qNum < totalQs-1 && gameActive) {
             // wait 2 seconds to allow player to see answer

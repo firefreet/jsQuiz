@@ -1,7 +1,7 @@
 // questions and answers from https://jaxenter.com/
 var questions1 = [
     {
-        question: "ho created JavaScript?",
+        question: "Who created JavaScript?",
         choices: ["a) Microsoft","b) Sun Microsystems","c) Oracle","d) Netscape"],
         answer: "d) Netscape"
     },

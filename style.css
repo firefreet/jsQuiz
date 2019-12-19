@@ -11,3 +11,8 @@
 body {
     background-image: url("dark-grey-terrazzo.png");
 }
+
+.btn-outline-primary:hover {
+    background-color: #fff;
+    color:  #007bff;
+}
