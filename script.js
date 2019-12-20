@@ -141,7 +141,7 @@ function resetPage() {
     respDiv.hide();
     stEndEl.show();
     headEl.text("JavaScript Quiz");
-    contEl.html("Would you like to take a Quiz? <br><small>(Q set 1 from <a href=\"https://jaxenter.com/know-your-javascript-trivia-134924.html\">jaxenter.com</a>)</small>");
+    contEl.html("Would you like to take a Quiz? <br><small>(Q set 1 from <a href=\"https://jaxenter.com/know-your-javascript-trivia-134924.html\">jaxenter.com</a>)<br>(Q set 2 extrapolated from <a href=\"https://www.toptal.com/javascript/interview-questions\">toptotal.com</a>)</small>");
 
 }
 
