@@ -174,6 +174,8 @@ function answerQuestion() {
         // display response
         respEl.html(resp + "The answer is: <br>" + answ);
         respDiv.show();
+        // scroll to the bottom of the page (for when the answer drops that low)
+        $("html, body").animate({scrollTop: $(document).height() }, 0)
         // if qs and seconds remain...
         if (qNum < totalQs-1 && gameActive) {
             // wait 2 seconds to allow player to see answer
@@ -197,5 +199,3 @@ function answerQuestion() {
     }
 
 }
-
-
