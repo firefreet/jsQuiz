@@ -42,7 +42,7 @@ var questions1 = [
     }
 
 ]
-
+// questions and anstwers extrapolated from toptotal.com  https://www.toptal.com/javascript/interview-questions
 var questions2 = [
     {
         question: "What is a potential pitfall with using ' typeof bar === \"object\" ' to determine if bar is an object?",
@@ -70,7 +70,7 @@ var questions2 = [
         answer: "d) 1"
     },
     {
-        question: "What will the following display? <small><div class=\"text-left\"><br>var length = 10\;<br>function fn() {<br>&emsp;console.log(this.length)\;<br>\}<br><br>var obj = \{<br>&emsp;length: 5\,<br>&emsp;method: function(fn) \{<br>&emsp;&emsp;arguments[0]()\;<br>\&emsp;}<br>}\;<br><br>obj.method(fn, 1)\;</div><small>",
+        question: "What will the following display? <br><small><div class=\"row text-left\"><div class=\"col\"></div><div class=\"col-12 col-md-6 border\">var length = 10\;<br>function fn() {<br>&emsp;console.log(this.length)\;<br>\}<br><br>var obj = \{<br>&emsp;length: 5\,<br>&emsp;method: function(fn) \{<br>&emsp;&emsp;arguments[0]()\;<br>\&emsp;}<br>}\;<br><br>obj.method(fn, 1)\;</div><div class=\"col\"></div></div></small>",
         choices: ["a) 10","b) 5","c) 2","d) 0"],
         answer: "c) 2"
     },

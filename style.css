@@ -1,20 +1,26 @@
 /* images from https://www.toptal.com/designers/subtlepatterns */
 
 .card {
-    background-image: url("blue-snow.png");
+    /* background-image: url("blue-snow.png"); */
+    background-color: lightgray;
 }
 .nav {
     font-size: x-large;
-    color: lightblue;
+    /* color: lightblue; */
+}
+
+a {
+    color: rgb(0, 47, 134);
 }
 
 body {
-    background-image: url("dark-grey-terrazzo.png");
+    background-image: url("brickwall_@2x.png");
+    /* background-color: gray; */
 }
 
-.btn-outline-primary:hover {
+.btn-outline-dark:hover {
     background-color: #fff;
-    color:  #007bff;
+    color:  black;
 }
 
 @media screen and (max-width: 374px) {

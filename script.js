@@ -13,7 +13,7 @@ var seconds = 0;
 var answClickable = true;
 var gameActive = true;
 var pauseSeconds = false;
-var tempBtnClasses = "btn btn-primary m-2 tempBtn btn-sm";
+var tempBtnClasses = "btn btn-dark m-2 tempBtn btn-sm w-100";
 if (localStorage.getItem("savedScores") === null) {
     var savedScores = []
 } else {
@@ -76,19 +76,22 @@ function clearButtons(){
 
 function displayQ () {
     // display question
-    respDiv.hide()
-    clearButtons()
-    headEl.text("Question: " + (qNum+1))
-    contEl.html(qs[qNum].question)
+    respDiv.hide();
+    clearButtons();
+    headEl.text("Question: " + (qNum+1));
+    contEl.html(qs[qNum].question);
+    var newRow = $("<div>");
+    newRow.addClass("row d-flex flex-wrap");
+    respDiv.before(newRow);
     // loop to display all choices
     $.each(qs[qNum].choices,function(i,val){
-        var newRow = $("<row>");
         var newBtn = $("<button>");
-        newRow.addClass("d-block")
+        var newCol = $("<div>");
+        newCol.addClass("col-12 col-lg-6");
         newBtn.text(val);
         newBtn.addClass(tempBtnClasses);
-        newRow.append(newBtn)
-        respDiv.before(newRow);
+        newCol.append(newBtn);
+        newRow.append(newCol);
     })
 }
 
@@ -147,7 +150,7 @@ function resetPage() {
 
 function answerQuestion() {
     if (answClickable && gameActive) {
-        $(this).addClass("btn-outline-primary").removeClass("btn-primary");
+        $(this).addClass("btn-outline-dark").removeClass("btn-dark");
         // stop buttons from doing anything until next Q
         answClickable = false
         // stop timer from decrementing until next Q
