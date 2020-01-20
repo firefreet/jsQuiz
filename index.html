@@ -1,31 +1,47 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
     <title>JS Quiz</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="container">
         <ul class="nav">
             <li class="nav-item">
-            <a class="nav-link" href="highscores.html" id="highScoreLink">View High Scores</a>
+                <a class="nav-link" href="highscores.html" id="highScoreLink">View High Scores</a>
             </li>
             <li class="ml-auto nav-item">
-            <a class="nav-link px-2" aria-disabled="true">Time: <span id="timeSpan">0</span></a>
+                <a class="nav-link px-2" aria-disabled="true">Time: <span id="timeSpan">0</span></a>
             </li>
         </ul>
         <div class="row">
             <div class="card mx-auto w-75 text-center">
                 <div class="card-body">
                     <h5 class="card-title" id="sectionHeader">JavaScript Quiz</h5>
-                    <p class="card-text" id="sectionContent">Would you like to take a Quiz? <br><small>(Q set 1 from <a href="https://jaxenter.com/know-your-javascript-trivia-134924.html">jaxenter.com</a>)<br>(Q set 2 extrapolated from <a href="https://www.toptal.com/javascript/interview-questions">toptotal.com</a>)</small></p>
-                    <p class="btn btn-dark startEndBtn btn-sm w-100" data-quiznum="1">Start Quiz 1</p> 
+                    <div class="card-text" id="sectionContent">
+                        <p>Would you like to take a Quiz?</p>
+                        <small>
+                            <p class="d-inline">( Q set 1 from </p>
+                            <a class="d-inline"
+                                href="https://jaxenter.com/know-your-javascript-trivia-134924.html">jaxenter.com</a>
+                            <p class="d-inline">)</p>
+                            <br>
+                            <p class="d-inline">( Q set 2 extrapolated from</p>
+                            <a class="d-inline"
+                                href="https://www.toptal.com/javascript/interview-questions">toptotal.com</a>
+                            <p class="d-inline">)</p>
+                        </small>
+                    </div>
+                    <p class="btn btn-dark startEndBtn btn-sm w-100" data-quiznum="1">Start Quiz 1</p>
                     <p class="btn btn-dark startEndBtn btn-sm w-100" data-quiznum="2">Start Quiz 2</p>
                     <div id="respDiv">
                         <hr>
@@ -37,10 +53,16 @@
     </div>
     <div id="footerOfPage"></div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="questions.js"></script>
-    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="assets/javascript/questions.js"></script>
+    <script src="assets/javascript/script.js"></script>
 </body>
+
 </html>

@@ -1,7 +1,7 @@
 /* images from https://www.toptal.com/designers/subtlepatterns */
 
 .card {
-    /* background-image: url("blue-snow.png"); */
+    /* background-image: url("assets/images/blue-snow.png"); */
     background-color: lightgray;
 }
 .nav {
@@ -14,7 +14,7 @@ a {
 }
 
 body {
-    background-image: url("brickwall_2X.png");
+    background-image: url("../images/brickwall_2X.png");
     /* background-color: gray; */
 }
 

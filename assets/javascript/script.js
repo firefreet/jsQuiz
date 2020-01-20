@@ -21,8 +21,8 @@ if (localStorage.getItem("savedScores") === null) {
 }
 
 // sounds from zapsplat.com
-var fail = new Audio("shortCrash.m4a")
-var succeed = new Audio("shortBell.m4a")
+var fail = new Audio("assets/sounds/shortCrash.m4a")
+var succeed = new Audio("assets/sounds/shortBell.m4a")
 
 stEndEl.on("click",startQuiz);
 cardEl.on("click",".tempBtn",answerQuestion);
